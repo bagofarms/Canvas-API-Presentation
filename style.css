@@ -1,0 +1,76 @@
+body {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1.1em;
+	margin: 30px;
+}
+
+body>section {
+	margin-top: 50px;
+}
+section section {
+	margin-left: 20px;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #00E;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+pre {
+	font-size: 1.2em;
+	background-color: #EEE;
+	border: 2px solid #AAA;
+	border-radius: 5px;
+	padding: 15px;
+	margin-right: 20px;
+}
+
+.download a {
+	font-size: 1.5em;
+}
+
+.anatomy div {
+	display: inline-block;
+	text-align: center;
+	font-size: 1.3em;
+	margin-top: 10px;
+}
+
+.anatomy span.box {
+	font-size: 1em;
+	background-color: #EEE;
+	border: 2px solid #AAA;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 10px 5px 0px 0px;
+	display: block;
+}
+
+.anatomy span.box.green{
+	background-color: #DFFAEB;
+	border-color: #B5D3C2;
+}
+
+.anatomy span.box.purple {
+	background-color: #F4DFFA;
+	border-color: #D1BED6;
+}
+
+.anatomy span.box.yellow {
+	background-color: #FAF5DF;
+	border-color: #D4CFB8;
+}
+
+.anatomy span.box.blue {
+	background-color: #DFE7FA;
+	border-color: #BAC2D5;
+}
+
+.anatomy span.box.red {
+	background-color: #FADFDF;
+	border-color: #D3B8B8;
+}

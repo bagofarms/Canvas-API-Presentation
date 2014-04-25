@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas API Presentation</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script>
+		//TODO:  Fill in API Key with your own
+		var api_key = '';
+	</script>
+</head>
+<body>
+	<h1>Canvas API Presentation</h1>
+	<section class="download">
+		<h1>Presentation Download</h1>
+		<p>
+			<a href="http://goo.gl/1uJV9x">http://goo.gl/1uJV9x</a>
+		</p>
+		<p>
+			<img src="qr.png" alt="qr code for GitHub Repository" />
+		</p>
+	</section>
+	<section>
+		<h1>Reference</h1>
+		<ul>
+			<li><a href="https://canvas.instructure.com">Account Signup - canvas.instructure.com</a></li>
+			<li><a href="http://api.instructure.com">API Reference - api.instructure.com</a></li>
+			<li><a href="https://github.com/instructure/canvas-lms">Download Canvas Source - https://github.com/instructure/canvas-lms</a></li>
+		</ul>
+	</section>
+	<section class="anatomy">
+		<h1>Anatomy of a GET API Call</h1>
+		<div>Base URL<span class="box green" title="Base URL">https://canvas.instructure.com</span></div>
+		<div>API Call<span class="box purple" title="API Call">/api/v1/conversations</span></div>
+		<div>Pagination<span class="box yellow" title="Pagination">?page=1&per_page=50</span></div>
+		<div>Parameters<span class="box blue" title="Parameters">&scope=unread</span></div>
+		<div>API Key<span class="box red" title="API Key">&access_token=1234</span></div>
+	</section>
+	<section>
+		<h1>Pages</h1>
+		<p><a href="https://canvas.instructure.com/doc/api/pages.html">Pages API Reference</a></p>
+		<section>
+			<h1>Getting a List of Pages</h1>
+			<p><a id="listPages" href="">https://canvas.instructure.com/api/v1/courses/273423/pages?page=1&per_page=50&access_token=1234</a></p>
+		</section>
+		<section>
+			<h1>Getting the Content of a Page</h1>
+			<p><a id="pageContent" href="">https://canvas.instructure.com/api/v1/courses/273423/pages/module-1a-overview/?access_token=1234</a></p>
+		</section>
+	</section>
+	<section>
+		<h1>Conversations</h1>
+		<p><a href="https://canvas.instructure.com/doc/api/conversations.html">Conversations API Reference</a></p>
+		<section>
+			<h1>Get Unread Conversations</h1>
+			<p><a id="getConversations" href="">https://canvas.instructure.com/api/v1/conversations?page=1&per_page=50&scope=unread&access_token=1234</a></p>
+		</section>
+		<section>
+			<h1>Create New Conversation</h1>
+			<pre>curl 'https://canvas.instructure.com/api/v1/conversations' \
+-X POST \
+-F 'recipients[]=1210538' \
+-F 'body=Hey!' \
+-H "Authorization: Bearer 1234"</pre>
+		</section>
+	</section>
+	<script>
+		listPages.href = 'https://canvas.instructure.com/api/v1/courses/273423/pages?page=1&per_page=50&access_token='+api_key;
+		pageContent.href = 'https://canvas.instructure.com/api/v1/courses/273423/pages/module-1a-overview/?access_token='+api_key;
+		getConversations.href = 'https://canvas.instructure.com/api/v1/conversations?page=1&per_page=50&scope=unread&access_token='+api_key;
+	</script>
+</body>
+</html>
